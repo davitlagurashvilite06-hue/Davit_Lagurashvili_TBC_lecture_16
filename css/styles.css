@@ -3,8 +3,8 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100px;
-  background: #69bbdb;
-  background: linear-gradient(90deg, rgb(105, 187, 219) 0%, rgb(152, 209, 123) 73%, rgb(106, 194, 79) 95%);
+  background: #5bbb86;
+  background: linear-gradient(90deg, rgb(92, 129, 89) 0%, rgb(93, 184, 130) 73%, rgb(109, 160, 97) 95%);
 }
 nav ul {
   display: flex;
@@ -45,8 +45,16 @@ nav ul li a.selected {
 nav ul li a.selected:hover {
   transform: none;
 }
+nav ul li a,
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  color: white;
+}
 nav .dropdown {
   display: none;
+  font-style: italic;
+  border: none;
 }
 @media (max-width: 1000px) {
   nav .dropdown {
