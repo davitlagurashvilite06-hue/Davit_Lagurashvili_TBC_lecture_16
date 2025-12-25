@@ -1,0 +1,79 @@
+$primary-green: rgb(129, 211, 108);
+$dark-green: darken($primary-green, 20%);
+
+@mixin leaf-style {
+    background-color: $primary-green;
+    border-radius: 100% 0% 52% 48% / 47% 0% 100% 53%;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: $dark-green;
+        transform: scale(1.05) rotate(-2deg);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #69bbdb;
+background: linear-gradient(90deg,rgba(105, 187, 219, 1) 0%, rgba(152, 209, 123, 1) 73%, rgba(106, 194, 79, 1) 95%);
+
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 25px;
+        padding: 0;
+        width: 100%;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            &:not(.logo-item) {
+                @include leaf-style;
+            }
+        
+
+            a {
+                text-decoration: none !important;
+                color: white;
+                font-weight: 600;
+                padding: 12px 25px;
+                display: block;
+
+                img {
+                    width: 110px;
+                    height: 30px;
+                }
+                
+                &.selected {
+                    background-color: $dark-green;
+                    border-radius: 51% 49% 50% 50% / 53% 0% 100% 47%  ;
+                    
+                    &:hover {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        display: none;
+        
+        @media (max-width: 1000px) {
+            display: block;
+        }
+    }
+
+    @media (max-width:1000px) {
+        & ul {
+            display: none;
+        }
+    }
+}
+
