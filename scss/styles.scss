@@ -8,18 +8,25 @@ $dark-green: darken($primary-green, 20%);
     
     &:hover {
         background-color: $dark-green;
-        transform: scale(1.05) rotate(-2deg);
+        transform: scale(1.1) translateY(-5px);
     }
 }
 
 body {
     background-color: #afd5af;
+     
+    & header {
+               position: sticky;
+                left: 0;
+                top: 0;
+                z-index: 10;
+    }
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 80px;
     background-color: #5bbb86;
     background-image: linear-gradient(
         90deg,
@@ -229,16 +236,6 @@ main {
                 font-size: 1.1vw;
             }
         }
-        @media (max-width: 475px) {
-            & {
-                gap: 5px;
-                padding: 6.5px;
-            }
-            
-            & h1, p {
-                font-size: 1vw;
-            }
-        }
     }
 
     .middle {
@@ -258,6 +255,31 @@ main {
             }
         }
     }
+
+      @media (max-width: 600px) {
+         & {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding: 5px;
+         }
+
+         & .left, & .right, & .middle {
+            width: 100%;
+            background-image: none;
+            border-radius: 7.5%;
+            gap: 7.5px;
+         }
+         & .left h1, & .left p , & .right h1, & .right p {
+            font-size: 2vw;
+         }
+      }
+
+    @media (max-width: 475px) {
+        padding: 15px;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -268,3 +290,77 @@ main {
   border-radius: 10px;
 }
 
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+
+  & h1 { 
+    font-family: "Arial GEO BoldItalic", sans-serif;
+    font-size: 2vw;
+    text-align: center; 
+    color: #0d3f18;
+  }
+
+  .card-box {
+    display: flex;
+    flex-wrap: wrap;          
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    padding: 0 2%;
+
+    .card1, .card2, .card3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      font-family: "Arial GEO BoldItalic", sans-serif;
+      font-size: 20px;
+      background-color: #5bbb86;
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+      flex: 1 1 30%;          
+      min-width: 250px;        
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        pointer-events: none;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+
+
+@media (max-width: 1000px) {
+  & .card-box .card1, & .card-box .card2, & .card-box .card3 {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  & .card-box .card1, & .card-box .card2, & .card-box .card3 {
+    flex: 1 1 90%;
+  }
+
+  & h1 {
+    font-size: 29px;
+  }
+}
+}
