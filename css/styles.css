@@ -53,9 +53,9 @@ nav ul li a {
   font-weight: 600;
   padding: 12px 25px;
   display: block;
-  color: #0d3f18;
   position: relative;
   color: #afd5af;
+  color: rgb(73.8481675393, 167.0104712042, 49.9895287958);
   transition: all 0.3s ease;
 }
 nav ul li a::before {
