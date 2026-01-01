@@ -57,6 +57,7 @@ nav ul li a {
   color: #afd5af;
   color: rgb(73.8481675393, 167.0104712042, 49.9895287958);
   transition: all 0.3s ease;
+  font-family: "Arial GEO BoldItalic", sans-serif;
 }
 nav ul li a::before {
   content: "";
@@ -405,6 +406,7 @@ main {
   align-items: center;
   gap: 25px;
   padding: 100px;
+  margin-bottom: 20px;
 }
 .section4 h1 {
   font-family: "Arial GEO BoldItalic", sans-serif;
@@ -494,5 +496,90 @@ main {
   }
   .section4 .cardz .right1 h1, .section4 .cardz .right1 p, .section4 .cardz .left2 h1, .section4 .cardz .left2 p {
     font-size: 2.7vw;
+  }
+}
+
+.section5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 5%;
+}
+.section5 h1 {
+  font-size: 2.5rem;
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  text-align: center;
+  color: #0d3f18;
+}
+.section5 .review-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+.section5 .review-box .review {
+  background-color: #e8f5e9;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.section5 .review-box .review .top {
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(135deg, rgb(89, 173, 100), rgb(129, 211, 108));
+  position: relative;
+}
+.section5 .review-box .review .top img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section5 .review-box .review .bottom {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section5 .review-box .review .bottom h5 {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  pointer-events: none;
+}
+.section5 .review-box .review .bottom p {
+  font-family: "Arial GEO BoldItalic", sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  .section5 .review-box {
+    justify-content: center;
+  }
+  .section5 .review {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .section5 .review {
+    width: 90%;
   }
 }/*# sourceMappingURL=styles.css.map */

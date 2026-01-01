@@ -96,6 +96,7 @@ nav {
                 @include leaf-style;
                 color: $dark-green;
                 transition: all 0.3s ease; 
+                font-family: "Arial GEO BoldItalic", sans-serif;
                 
                 @media (min-width: 1200px) {
                     & {
@@ -484,6 +485,7 @@ main {
     align-items: center;
     gap: 25px;
     padding: 100px;
+    margin-bottom: 20px;
 
        & h1 {
         font-family: "Arial GEO BoldItalic", sans-serif;
@@ -594,3 +596,98 @@ main {
         }
 }
 
+.section5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 5%;
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Arial GEO BoldItalic", sans-serif;
+    text-align: center;
+    color: #0d3f18;
+  }
+
+  .review-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+
+    .review {
+      background-color: #e8f5e9;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      .top {
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(135deg, rgb(89,173,100), rgb(129,211,108));
+        position: relative;
+      }
+
+      .top img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .bottom {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h5 {
+          font-family: "Arial GEO BoldItalic", sans-serif;
+          font-size: 1.2rem;
+          margin: 0;
+          pointer-events: none;
+        }
+
+        p {
+          font-family: "Arial GEO BoldItalic", sans-serif;
+          font-size: 1rem;
+          color: #555;
+          margin: 0;
+          pointer-events: none;
+        }
+        }
+      }
+    }
+
+
+  @media (max-width: 1024px) {
+    .review-box {
+      justify-content: center;
+    }
+    .review {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .review {
+      width: 90%;
+    }
+  }
+}
